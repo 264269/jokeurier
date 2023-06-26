@@ -1,6 +1,9 @@
-package net.dbectnwecton.jokeurier;
+package net.dbectnwecton.joecourier;
 
 import com.mojang.logging.LogUtils;
+import net.dbectnwecton.joecourier.block.ModBlocks;
+import net.dbectnwecton.joecourier.item.ModItems;
+import net.dbectnwecton.joecourier.villager.ModVillagers;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,13 +15,17 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(Jokeurier.MOD_ID)
-public class Jokeurier {
-    public static final String MOD_ID = "jokeurier";
+@Mod(JoeCourier.MOD_ID)
+public class JoeCourier {
+    public static final String MOD_ID = "joecourier";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public Jokeurier() {
+    public JoeCourier() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -26,7 +33,9 @@ public class Jokeurier {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIS();
+        });
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

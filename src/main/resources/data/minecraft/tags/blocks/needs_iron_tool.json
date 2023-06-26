@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "joecourier:deepslate_zircon_ore",
+    "joecourier:zircon_ore",
+    "joecourier:zircon_block"
+  ]
+}

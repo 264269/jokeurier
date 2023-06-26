@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "joecourier:block/jumpy_block" }
+  }
+}

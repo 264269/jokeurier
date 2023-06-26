@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model": "joecourier:block/zircon_block"}
+  }
+}

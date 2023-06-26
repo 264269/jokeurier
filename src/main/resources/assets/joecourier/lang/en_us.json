@@ -1,0 +1,13 @@
+{
+  "item.joecourier.zircon": "Zircon",
+  "item.joecourier.raw_zircon": "Raw Zircon",
+  "item.joecourier.eight_ball": "Eight Ball",
+
+  "block.joecourier.zircon_block": "Block of Zircon",
+  "block.joecourier.zircon_ore": "Zircon Ore",
+  "block.joecourier.deepslate_zircon_ore": "Deepslate Zircon Ore",
+  "block.joecourier.jumpy_block": "Jumpy Block",
+
+  "itemGroup.tutorialtab": "Zircon Tab",
+  "entity.minecraft.villager.jumpy_master": "Jumpy Master"
+}
